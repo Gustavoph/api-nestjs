@@ -1,0 +1,51 @@
+### List all users
+GET http://localhost:3000/users
+
+### List all one user
+GET http://localhost:3000/users/19
+
+### Create a user
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+  "name": "Gustavo Oliveira",
+  "email": "gusta1@mail.com",
+  "password": "12345678"
+}
+
+### Update a user
+PUT http://localhost:3000/users/1
+content-type: application/json
+
+{
+  "name": "Gustavo Oliveira",
+  "email": "gusta@mail.com",
+  "password": "12345678"
+}
+
+### Update a user partial
+PATCH http://localhost:3000/users/1
+content-type: application/json
+
+{
+  "name": "Gustavo Oliveira"
+}
+
+### Delete a user 
+DELETE http://localhost:3000/users/1
+
+
+### Login
+POST http://localhost:3000/auth/login
+content-type: application/json
+
+{
+  "email": "gusta@mail.com",
+  "password": "12345678"
+}
+
+### Me
+POST http://localhost:3000/auth/me
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImlhdCI6MTY3NDU3OTMzOSwiZXhwIjoxNjc1MTg0MTM5LCJpc3MiOiJsb2dpbiIsInN1YiI6IjE5In0.MZPzyJrge1b8wbNhK-P8ueW-ZPDo0DZ2FadgiOJOkc0
